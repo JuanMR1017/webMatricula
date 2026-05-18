@@ -132,51 +132,76 @@
 
                                     </div>
 
-                                    <div class="card-body">
-                                        <!-- Menú de Opciones -->
-                                        <div class="row">
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <button type="button" id="btnAgre" class="btn-block btn-lg btn-primary">Agregar</button>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="form-group">
-                                                    <button type="button" id="btnModi" class="btn-block btn-lg btn-primary">Modificar</button>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="form-group">
-                                                    <button type="button" id="btnBusc" class="btn-block btn-lg btn-primary">Buscar</button>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-2">
-                                                <div class="form-group">
-                                                    <button type="button" id="btnCanc" class="btn-block btn-lg btn-primary">Cancelar/Limpiar</button>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="form-group">
-                                                    <button type="button" id="btnImpr" class="btn-block btn-lg btn-primary">Impresión</button>
-                                                </div>
-                                            </div>
+                            <div class="card-body">
+                                <!-- Menú de Opciones -->
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <button type="button" id="btnAgre" class="btn-block btn-lg btn-primary">Agregar</button>
                                         </div>
-                                        <!-- Fin Menú de Opciones-->
-                                        <!-- Zona de Mensajes -->
-                                        <div class="card-footer">
-                                            <div id="dvMensaje" class=""></div>
-                                        </div>
-
-                                        <!-- INICIO Sección ingresados (oculta al inicio) -->
-                                        <!-- Acá va la Sección de ingresados con la tabla respectiva -->
-                                        <!-- FIN Sección ingresados -->
                                     </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <button type="button" id="btnModi" class="btn-block btn-lg btn-primary">Modificar</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <button type="button" id="btnBusc" class="btn-block btn-lg btn-primary">Buscar</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <button type="button" id="btnCanc" class="btn-block btn-lg btn-primary">Cancelar/Limpiar</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <button type="button" id="btnImpr" class="btn-block btn-lg btn-primary">Impresión</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Fin Menú de Opciones-->
+                                <!-- Zona de Mensajes -->
+                                <div class="card-footer">
+                                    <div id="dvMensaje" class=""></div>
+                                </div>
+
+                                <div id="seccionDetalleMae" style="display: none;">
+                                    <div class="row mt-3">
+                                        <div class="col-md-12">
+                                            <!-- Tabla para mostrar asignaturas ingresadas-->
+                                            <h5> Asignaturas Agregadas </h5>
+                                            <table class="table table-bordered table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <!-- Títulos de campos ---->
+                                                        <th>Código Asignatura</th>
+                                                        <th>Nombre Asignatura</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="tablaDetalleMat">
+                                                    <!-- Aquí se agregan dinámicamente las asignaturas inscritas desde JS -->
+                                                </tbody>
+                                            </table>
+                                            <div id="mensajeSinDetalle" class="text-center text-muted mt-2" style="display:none;">
+                                                No hay asignaturas agregadas aún.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- INICIO Sección ingresados (oculta al inicio) -->
+                                <!-- Acá va la Sección de ingresados con la tabla respectiva -->
+                                <!-- FIN Sección ingresados -->
+                            </div>
                                 </div><!-- card card-gray-dark -->
                                 <!-- Acá row para la tabla -->
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <table id="tblDatos" class="table table-bordered table-striped">
+                                        <table id="tablaDatos" class="table table-bordered table-striped">
                                             <thead>
                                                 <tr>
                                                     <th></th>

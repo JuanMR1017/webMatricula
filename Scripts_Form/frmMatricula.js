@@ -1,8 +1,11 @@
-﻿var dir = "http://localhost:XXXXX/api/";
-
+﻿var dir = "http://localhost:52960/api/";
+var oTabla = $("#tblDatos").DataTable();
+var datMae = [];
 jQuery(function () {
     //Carga el menú
     $("#dvMenu").load("../Paginas/Menu.html");
+
+    
 
     //Registrar los botones para responder al evento click
     $("#btnAgre").on("click", function () {

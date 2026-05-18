@@ -11,7 +11,10 @@
     <link href="../Estilos/css/all.min.css" rel="stylesheet" />
     <link href="../Scripts_Form/Comunes/bootstrap.min.css" rel="stylesheet" />
     <link href="../Scripts_Form/Comunes/sweetalert2.min.css" rel="stylesheet" />
-
+    <link href="../Estilos/select2.min.css" rel="stylesheet" />
+    <link href="../Estilos/select2-bootstrap4.min.css" rel="stylesheet" />
+    <link href="../Estilos/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="../Estilos/dataTables.min.css" rel="stylesheet" />
 </head>
 <body class="hold-transition sidebar-mini">
     <section class="content">
@@ -88,7 +91,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="cboFacultad">Facultad:</label>
-                                                    <select class="form-control" id="cboFacultad">
+                                                    <select class="form-control" id="cboFacultad" onchange="llenarComboProgXFac()">
                                                     </select>
                                                 </div>
                                             </div>
@@ -96,7 +99,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="cboPrograma">Programa:</label>
-                                                    <select class="form-control" id="cboPrograma">
+                                                    <select class="form-control select2" id="cboPrograma" style="width: 100%;" onchange="llenarTabla()">
                                                     </select>
                                                 </div>
                                             </div>
@@ -116,7 +119,7 @@
                                         <div class="card-body">
                                             <!-- Menú de Opciones -->
                                             <div class="row">
-                                                <div class="col-md-3">
+                                                <div class="col-md-2">
                                                     <div class="form-group">
                                                         <button type="button" id="btnAgre" class="btn-block btn-lg btn-primary">Agregar</button>
                                                     </div>
@@ -132,7 +135,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="col-md-2">
+                                                <div class="col-md-3">
                                                     <div class="form-group">
                                                         <button type="button" id="btnCanc" class="btn-block btn-lg btn-primary">Cancelar/Limpiar</button>
                                                     </div>
@@ -163,6 +166,9 @@
                                                     <th></th>
                                                     <th></th>
                                                     <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
                                                 </tr>
                                             </thead>
                                         </table>
@@ -180,9 +186,18 @@
     </section>
     <script src="../Scripts/jquery-3.7.0.min.js"></script>
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
+
+    <script src="../Scripts_Form/Comunes/sweetalert2.all.min.js"></script>
+
+    <script src="../Scripts/select2.min.js"></script>
+    <script src="../Scripts_Form/Comunes/Combos.js"></script>
+
+    <script src="../Scripts/jquery.dataTables.min.js"></script>
+    <script src="../Scripts/dataTables.bootstrap4.js"></script>
+    <script src="../Scripts_Form/Comunes/Tablas.js"></script>
+
     <!-- Para el script de control -->
     <script src="../Scripts_Form/frmInicio.js"></script>
     <script src="../Scripts_Form/frmEstudiante.js"></script>
-    <script src="../Scripts_Form/Comunes/sweetalert2.all.min.js"></script>
 </body>
 </html>
